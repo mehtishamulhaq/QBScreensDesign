@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
     skipSections: {
         height: 120,
         width: '100%',
-        backgroundColor: colors.white,
         justifyContent: 'center',
         alignItems: 'center',
     },

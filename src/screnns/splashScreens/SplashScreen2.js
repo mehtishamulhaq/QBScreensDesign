@@ -14,7 +14,7 @@ const SplashScreen2 = ({ route }) => {
         isLast = route.params.isLast;
     }
 
-    const whiteOvergreenBackgroundTopNotch = require('./../../../asssets/images/whiteOverGrayBackgroundTopNotch.png');
+    const whiteOverGrayBackgroundTopNotch = require('./../../../asssets/images/whiteOverGrayBackgroundTopNotch.png');
     const text = `And see what takes our fancy `;
     const cardText = `Scroll through all the fantastic vanues involved `;
     const purpleCard = require('./../../../asssets/images/purpleCardSideNotches.png');
@@ -29,7 +29,7 @@ const SplashScreen2 = ({ route }) => {
 
 
             <ImageBackground
-                source={whiteOvergreenBackgroundTopNotch}
+                source={whiteOverGrayBackgroundTopNotch}
                 resizeMode="stretch"
                 resizeMethod='scale'
                 style={styles.secondLayerBackground}
