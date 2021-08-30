@@ -53,16 +53,13 @@ const SplashScreen1 = ({ route }) => {
 
                     </ImageBackground>
                 </View>
-                {/* <View style={styles.skipSection}> */}
                 <SkipSection
                     isFirst={isFirst}
                     isLast={isLast}
                     steps={4}
                     currentStep={1}
-                    image={grayImageCircle}
                     nextRouteName='SplashScreen2'
                 />
-                {/* </View> */}
             </ImageBackground>
         </View>
 
