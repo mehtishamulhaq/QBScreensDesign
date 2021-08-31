@@ -49,7 +49,7 @@ const SplashScreen3 = ({ route }) => {
                     isLast={isLast}
                     steps={4}
                     currentStep={3}
-                    nextRouteName='SplashScreen3'
+                    nextRouteName='SplashScreen4'
                 />
             </ImageBackground>
         </View>
