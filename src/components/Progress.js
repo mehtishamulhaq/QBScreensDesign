@@ -22,7 +22,7 @@ const Progress = (props) => {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: 1,
+        height: 2,
         backgroundColor: colors.lightGray,
         display: 'flex',
         flexDirection: 'row',

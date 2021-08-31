@@ -13,14 +13,13 @@ import { HStack } from 'native-base';
 import Progress from '../../components/Progress';
 import { backgroundColor } from 'styled-system';
 
-const SkipSection = ({ isFirst, isLast, steps, currentStep, image, nextRouteName }) => {
+const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName }) => {
 
     const nextIcon = <EvilIcons name='arrow-right' color={colors.gray} size={60} onPress={() => navigation.navigate(nextRouteName)} />
     const previousIcon = <EvilIcons name='arrow-left' color={colors.gray} size={60} onPress={() => navigation.goBack()} />
     const navigation = useNavigation();
 
     return (
-        // <View flex={1} style={styles.container}>
         <View style={styles.skipSections}>
             <HStack alignItems='center'>
                 <View style={styles.previousIcon}>
@@ -39,18 +38,10 @@ const SkipSection = ({ isFirst, isLast, steps, currentStep, image, nextRouteName
                 </View>
             </View>
         </View>
-        // </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.white
-    },
     imageContainer: {
         flex: 1
     },
@@ -63,6 +54,8 @@ const styles = StyleSheet.create({
         flex: 1
     },
     progressbar: {
+        marginRight: 10,
+        marginLeft: 10,
         flex: 3,
     },
 

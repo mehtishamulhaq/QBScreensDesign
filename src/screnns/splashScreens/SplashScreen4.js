@@ -23,16 +23,12 @@ const SplashScreen3 = ({ route }) => {
     return (
         <View style={styles.container}>
             <View style={styles.topNotch} />
-
-
             <ImageBackground
                 source={purpleOverGreenBackgroundTopNotch}
                 resizeMode="stretch"
                 resizeMethod='scale'
                 style={styles.secondLayerBackground}
-
             >
-
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>{text} </Text>
                 </View>
@@ -42,14 +38,12 @@ const SplashScreen3 = ({ route }) => {
                         resizeMode="stretch"
                         resizeMethod='resize'
                         style={styles.secondLayerBackground}
-
                     >
                         <View style={styles.greenCardContainer}>
                             <ImageBackground
                                 source={greenCard}
                                 // resizeMode="contain"
                                 style={styles.greenCard}
-
                             >
                                 <View style={styles.greenCardTextContainer}>
                                     <Text style={styles.greenCardText}>{greenCardText}</Text>
@@ -63,7 +57,6 @@ const SplashScreen3 = ({ route }) => {
                                 </View>
                             </ImageBackground>
                         </View>
-
                         <SkipSection
                             isFirst={isFirst}
                             isLast={isLast}
@@ -160,6 +153,7 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         paddingRight: 20,
         paddingLeft: 20,
+        borderRadius: 2,
     },
     gettingStartedText: {
         color: colors.purple,

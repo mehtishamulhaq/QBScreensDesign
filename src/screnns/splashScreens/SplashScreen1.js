@@ -16,7 +16,8 @@ const SplashScreen1 = ({ route }) => {
     const whiteOvergreenBackgroundTopNotch = require('./../../../asssets/images/whiteOvergreenBackgroundTopNotch.png');
     const text = `Welcome to your Pocket guide to Chester Food & Drink Month`;
     const locationImage = require('./../../../asssets/images/locationImage.png');
-    const grayImageCircle = require('./../../../asssets/images/grayImageCircle.png');
+    const grayImageCircle = require('./../../../asssets/images/grayCircle.png');
+    const fortWithCircle = require('./../../../asssets/images/fortWithCircle.png');
 
 
     return (
@@ -37,19 +38,12 @@ const SplashScreen1 = ({ route }) => {
 
                 <View style={styles.imageContainer}>
                     <ImageBackground
-                        source={locationImage}
-                        resizeMode="cover"
+                        source={fortWithCircle}
+                        resizeMode="contain"
                         resizeMethod='scale'
                         style={styles.thirdLayerBackground}
 
                     >
-                        <Image
-                            style={styles.grayImageCircle}
-                            source={grayImageCircle}
-                            width={80}
-                            height={80}
-                        >
-                        </Image>
 
                     </ImageBackground>
                 </View>
