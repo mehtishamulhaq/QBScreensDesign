@@ -3,7 +3,6 @@ import SplashScreen from './SplashScreen';
 import { ImageBackground, Image, StyleSheet, Text, View } from "react-native";
 import colors from '../../constants/colors';
 import SkipSection from './skipSection';
-import { borderColor, display, flex } from 'styled-system';
 
 
 const SplashScreen2 = ({ route }) => {
@@ -15,8 +14,8 @@ const SplashScreen2 = ({ route }) => {
     }
 
     const whiteOverGrayBackgroundTopNotch = require('./../../../asssets/images/whiteOverGrayBackgroundTopNotch.png');
-    const text = `And see what takes our fancy `;
-    const cardText = `Scroll through all the fantastic vanues involved `;
+    const text = `And see what takes your fancy ____ `;
+    const cardText = `Scroll through all the fantastic vanues involved... `;
     const purpleCard = require('./../../../asssets/images/purpleCardSideNotches.png');
     const pubs = require('./../../../asssets/images/pubs.png');
     const bars = require('./../../../asssets/images/bars.png');
@@ -75,6 +74,7 @@ const SplashScreen2 = ({ route }) => {
                     steps={4}
                     currentStep={2}
                     nextRouteName='SplashScreen3'
+                    color={colors.gray}
                 />
             </ImageBackground>
         </View>

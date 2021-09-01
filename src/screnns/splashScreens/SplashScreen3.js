@@ -50,6 +50,7 @@ const SplashScreen3 = ({ route }) => {
                     steps={4}
                     currentStep={3}
                     nextRouteName='SplashScreen4'
+                    color={colors.purple}
                 />
             </ImageBackground>
         </View>

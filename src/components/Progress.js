@@ -2,13 +2,18 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import colors from '../constants/colors';
 
+
+
 const Progress = (props) => {
-    const { steps, currentStep } = props;
+    const { steps, currentStep, color } = props;
 
     let style = {};
     let progressBar = [];
     for (let i = 1; i <= steps; i++) {
-        style = i === currentStep ? styles.highlightedStep : styles.normalStep;
+        style = i === currentStep ?
+            { ...styles.highlightedStep, backgroundColor: color } :
+            { ...styles.normalStep, backgroundColor: color };
+
         progressBar.push(<View key={i} style={style} />)
     }
 
@@ -36,6 +41,7 @@ const styles = StyleSheet.create({
         flex: 1,
         height: 1,
         backgroundColor: colors.lightGray,
+        opacity: 0.6
     }
 
 });

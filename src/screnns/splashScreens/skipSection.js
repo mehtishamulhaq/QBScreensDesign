@@ -13,10 +13,10 @@ import { HStack } from 'native-base';
 import Progress from '../../components/Progress';
 import { backgroundColor } from 'styled-system';
 
-const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName }) => {
+const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName, color }) => {
 
-    const nextIcon = <EvilIcons name='arrow-right' color={colors.gray} size={60} onPress={() => navigation.navigate(nextRouteName)} />
-    const previousIcon = <EvilIcons name='arrow-left' color={colors.gray} size={60} onPress={() => navigation.goBack()} />
+    const nextIcon = <EvilIcons name='arrow-right' color={color} size={60} onPress={() => navigation.navigate(nextRouteName)} />
+    const previousIcon = <EvilIcons name='arrow-left' color={color} size={60} onPress={() => navigation.goBack()} />
     const navigation = useNavigation();
 
     return (
@@ -26,15 +26,15 @@ const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName }) => 
                     {!isFirst ? previousIcon : null}
                 </View>
                 <View style={styles.progressbar}>
-                    <Progress steps={steps} currentStep={currentStep} />
+                    <Progress steps={steps} currentStep={currentStep} color={color} />
                 </View>
                 <View style={styles.nextIcon}>
                     {!isLast ? nextIcon : null}
                 </View>
             </HStack>
             <View style={styles.skipTextContainer}>
-                <View style={styles.underline}>
-                    <Text style={styles.skipText}>Skip</Text>
+                <View style={{ ...styles.underline, borderBottomColor: color }}>
+                    <Text style={{ ...styles.skipText, color: color }}>Skip</Text>
                 </View>
             </View>
         </View>
