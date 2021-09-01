@@ -10,6 +10,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import colors from '../constants/colors';
 import dummyVenueData from '../constants/dummyVenueData';
 import VenueList from '../components/VenuList';
+const ChesterFoodNDrinkWeekLogo = require('./../../asssets/images/ChesterFood&DrinkWeekLogo.png');
 
 const ChesterScreen = (props) => {
     const acceptingOrder = dummyVenueData.filter(item => item.accepting)
@@ -49,7 +50,11 @@ const ChesterScreen = (props) => {
             </View>
 
             <View style={styles.logoContainer}>
-                <Text style={styles.logoText}>Chester Logo</Text>
+                <Image
+                    source={ChesterFoodNDrinkWeekLogo}
+                    width={250}
+                    height={40}
+                />
             </View>
 
         </View>

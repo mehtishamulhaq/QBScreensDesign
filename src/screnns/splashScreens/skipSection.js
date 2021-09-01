@@ -29,14 +29,18 @@ const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName, color
                     <Progress steps={steps} currentStep={currentStep} color={color} />
                 </View>
                 <View style={styles.nextIcon}>
-                    {!isLast ? nextIcon : null}
+                    {/* {!isLast ? nextIcon : null} */}
+                    {nextIcon}
                 </View>
             </HStack>
+
             <View style={styles.skipTextContainer}>
                 <View style={{ ...styles.underline, borderBottomColor: color }}>
-                    <Text style={{ ...styles.skipText, color: color }}>Skip</Text>
+                    {!isLast ? (<Text style={{ ...styles.skipText, color: color }}>Skip</Text>) : null}
                 </View>
             </View>
+
+
         </View>
     );
 }
@@ -60,7 +64,8 @@ const styles = StyleSheet.create({
     },
 
     skipSections: {
-        height: 120,
+        // height: 120,
+        marginBottom: 10,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',

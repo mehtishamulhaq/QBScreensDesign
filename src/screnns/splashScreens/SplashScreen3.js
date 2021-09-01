@@ -3,6 +3,8 @@ import SplashScreen from './SplashScreen';
 import { ImageBackground, Image, StyleSheet, Text, View } from "react-native";
 import colors from '../../constants/colors';
 import SkipSection from './skipSection';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 const SplashScreen3 = ({ route }) => {
     let isFirst = false;
@@ -34,14 +36,16 @@ const SplashScreen3 = ({ route }) => {
                     <Image
                         source={whiteCircle}
                         style={styles.thirdLayerBackground}
-                        width={80}
-                        height={80}
+                        width={100}
+                        height={100}
 
                     >
                     </Image>
                 </View>
                 <View style={styles.textContainer}>
-                    <Text style={styles.text}>{text} </Text>
+                    <Text style={styles.text}>Any venue marked with a
+                        <MaterialCommunityIcons name="crown" color={colors.purple} size={26} />
+                        is a Qbunk venue, and you can make your order direct in app and bunk the Q. </Text>
                 </View>
 
                 <SkipSection
@@ -84,6 +88,7 @@ const styles = StyleSheet.create({
         width: '100%',
         flex: 3,
         marginLeft: 30,
+        paddingRight: 30,
         marginRight: 30,
         display: 'flex',
         justifyContent: 'flex-start',
@@ -97,6 +102,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         paddingRight: 30,
+        marginBottom: 30,
 
     },
     belowText: {

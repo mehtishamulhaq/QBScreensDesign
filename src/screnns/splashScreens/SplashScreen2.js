@@ -118,11 +118,12 @@ const styles = StyleSheet.create({
         color: colors.purple,
         fontSize: 18,
         fontFamily: 'Regular',
+        marginLeft: 30,
+        paddingRight: 200,
     },
     textContainer: {
         width: '100%',
         flex: 1,
-        marginLeft: 30,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-start',

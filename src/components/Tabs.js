@@ -6,7 +6,7 @@ import EntypoIcon from 'react-native-vector-icons/Entypo';
 
 import HomeScreen from './../screnns/HomeScreen';
 import ChesterScreen from './../screnns/ChesterScreen';
-import MyHistoryScreen from './../screnns/MyHistoryScreen';
+import MyHistoryScreen from './../screnns/MyOrdersScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -39,10 +39,10 @@ function MyTabs() {
                     }}
                 />
                 <Tab.Screen
-                    name="MyHistoryScreen"
+                    name="MyOrdersScreen"
                     component={MyHistoryScreen}
                     options={{
-                        tabBarLabel: 'My History',
+                        tabBarLabel: 'My Orders',
                         tabBarIcon: ({ color }) => (
                             <EntypoIcon name="text-document" color={color} size={26} />
                         ),

@@ -3,12 +3,14 @@ import React from 'react';
 import {
     StyleSheet,
     View,
-    Text
+    Text,
+    Image
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../constants/colors';
 import dummyVenueData from '../constants/dummyVenueData';
 import VenueList from '../components/VenuList';
+const ChesterFoodNDrinkWeekLogo = require('./../../asssets/images/ChesterFood&DrinkWeekLogo.png');
 
 const HomeScreen = (props) => {
     const acceptingOrder = dummyVenueData.filter(item => item.accepting)
@@ -47,7 +49,11 @@ const HomeScreen = (props) => {
             </View>
 
             <View style={styles.logoContainer}>
-                <Text style={styles.logoText}>Chester Logo</Text>
+                <Image
+                    source={ChesterFoodNDrinkWeekLogo}
+                    width={250}
+                    height={40}
+                />
             </View>
 
         </View>

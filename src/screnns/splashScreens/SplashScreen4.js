@@ -17,6 +17,8 @@ const SplashScreen3 = ({ route }) => {
     const whiteBackgroundTopNotch = require('./../../../asssets/images/whiteBackgroundTopNotch.png');
     const greenCard = require('./../../../asssets/images/greenCard.png');
     const greenCardText = 'What are you waiting for...';
+    const ChesterFoodNDrinkWeekLogo = require('./../../../asssets/images/ChesterFood&DrinkWeekLogo.png');
+    const blackCircle = require('./../../../asssets/images/blackCircle.png');
 
 
 
@@ -30,7 +32,24 @@ const SplashScreen3 = ({ route }) => {
                 style={styles.secondLayerBackground}
             >
                 <View style={styles.textContainer}>
-                    <Text style={styles.text}>{text} </Text>
+                    <Text style={styles.text}>
+                        Qbunk are proud to be the headline sponsor of
+                        <Image
+                            source={ChesterFoodNDrinkWeekLogo}
+                            width={250}
+                            height={40}
+                        />
+                    </Text>
+
+
+                </View>
+                <View>
+                    <Image
+                        style={{ position: 'absolute', right: 30, top: -60, zIndex: 10 }}
+                        source={blackCircle}
+                        width={100}
+                        height={100}
+                    />
                 </View>
                 <View style={styles.lowerHalf}>
                     <ImageBackground
@@ -42,7 +61,7 @@ const SplashScreen3 = ({ route }) => {
                         <View style={styles.greenCardContainer}>
                             <ImageBackground
                                 source={greenCard}
-                                // resizeMode="contain"
+                                resizeMode="contain"
                                 style={styles.greenCard}
                             >
                                 <View style={styles.greenCardTextContainer}>
@@ -98,13 +117,13 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontSize: 30,
         fontFamily: 'Regular',
+        marginLeft: 30,
+        marginRight: 30,
+        // marginTop: 0,
     },
     textContainer: {
         width: '100%',
-        flex: 4,
-        marginLeft: 30,
-        marginRight: 30,
-        marginTop: 60,
+        flex: 5,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-start',

@@ -8,7 +8,7 @@ import SplashScreen3 from './splashScreens/SplashScreen3';
 import SplashScreen4 from './splashScreens/SplashScreen4';
 
 
-const MyHistoryScreen = () => {
+const MyOrdersScreen = () => {
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
@@ -45,5 +45,5 @@ const MyHistoryScreen = () => {
 
 
 
-export default MyHistoryScreen;
+export default MyOrdersScreen;
 
