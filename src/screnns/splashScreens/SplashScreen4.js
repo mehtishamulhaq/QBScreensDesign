@@ -156,6 +156,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     greenCardText: {
+        paddingLeft: 100,
+        paddingRight: 100,
         color: colors.purple,
         fontSize: 20
     },
