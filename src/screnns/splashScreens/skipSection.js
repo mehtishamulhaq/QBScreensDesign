@@ -11,13 +11,16 @@ import colors from '../../constants/colors';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import { HStack } from 'native-base';
 import Progress from '../../components/Progress';
-import { backgroundColor } from 'styled-system';
 
-const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName, color }) => {
-
-    const nextIcon = <EvilIcons name='arrow-right' color={color} size={60} onPress={() => navigation.navigate(nextRouteName)} />
+const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName, color, params }) => {
+    if (!params) params = {}
+    const nextIcon = <EvilIcons name='arrow-right' color={color} size={60} onPress={() => navigation.navigate(nextRouteName, { ...params })} />
     const previousIcon = <EvilIcons name='arrow-left' color={color} size={60} onPress={() => navigation.goBack()} />
     const navigation = useNavigation();
+
+    const handleSkip = () => {
+        navigation.navigate('MyOrdersScreen', { skipSurvey: true })
+    }
 
     return (
         <View style={styles.skipSections}>
@@ -34,9 +37,9 @@ const SkipSection = ({ isFirst, isLast, steps, currentStep, nextRouteName, color
                 </View>
             </HStack>
 
-            <View style={styles.skipTextContainer}>
+            <View style={styles.skipTextContainer} >
                 <View style={{ ...styles.underline, borderBottomColor: color }}>
-                    {!isLast ? (<Text style={{ ...styles.skipText, color: color }}>Skip</Text>) : null}
+                    {!isLast ? (<Text onPress={handleSkip} style={{ ...styles.skipText, color: color }}>Skip</Text>) : null}
                 </View>
             </View>
 

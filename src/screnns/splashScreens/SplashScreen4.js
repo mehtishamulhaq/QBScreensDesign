@@ -81,7 +81,8 @@ const SplashScreen3 = ({ route }) => {
                             isLast={isLast}
                             steps={4}
                             currentStep={4}
-                            nextRouteName=''
+                            nextRouteName='MyOrdersScreen'
+                            params={{ skipSurvey: true }}
                             color={colors.purple}
                         />
                     </ImageBackground>
